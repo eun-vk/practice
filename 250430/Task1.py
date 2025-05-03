@@ -203,19 +203,86 @@ a = float(input())
 print(f"가장 가까운 정수: {round(a)}")
 
 #문제45: 날짜 유효성 검사 
-y,m,d= input().split('-')
-if m == 2 and d ==28 or m ==2 and 29:
-    print()
+y,m,d= map(int,input().split('-'))
+
+if m < 1 or m > 12: #월에 대한 유효성 검사: 모두 int로 바꿨기 때문. 
+    print("유효하지 않은 날짜입니다.")
+    
+else: #월에 대한 일수 설정 
+    if m == 2:
+        if (y%4 ==0 and y%100 != 0) or y%400 ==0:
+            max_day = 29
+        else:
+            max_day = 28
+    elif m in [4, 6, 9, 11]:
+        max_day = 30
+    else:
+        max_day = 31
+
+    if 1 <= d <= max_day:
+        print("유효한 날짜입니다.")
+    else:
+        print("유효하지 않은 날짜입니다.")
+
+#문제46 : 파일 확장자 추출 
+a = input().split('.')
+print(f"확장자: {a[1]}")
+
+#문제47 : 문자열 압축 
+
+#문제48 : 팰린드롬 검사 
+a= input()
+b = a[::-1]
+if a == b:
+    print(f"\'{a}\'은 팰린드롬입니다.")
+else:
+    print(f"\'{a}\'은 팰린드롬이 아닙니다.")
+
+# 문제 49 : 간단한 암호화 
+a = input()
+for i in a:
+    print(chr(ord(i)+3), end="")
 
 
-        
+# 문제 50 : IP주소 검증 
+
     
 
 
 
+'''for 변수 in 반복가능한 것:
+    실행할 코드 '''
+
+for c in "hello": #hello는 반복 가능한 시퀀스형 자료다. 
+    print(c) #hello 문자열 안에서 문자를 하나씩 꺼내서 그 값을 c라는 변수에 담아서 반복한다. 
+
+a= ["apple", "banana", "cherry"]
+for b in a:
+    print(b)
+
+for i in range(5)
+print(i) #range는 0~4까지의 수를 5번 반복한다. 
+
+for i in range(1,11):
+    if i % 2 ==0:
+        print(f"{i}는 짝수입니다.")
 
 
+i = 1 
+while i <=5:
+    print(i)
+    i +=1
 
+i = 1 
+while i <=10:
+    print(i)
+    i +=1
+
+num = int(input())
+
+while i != 0:
+    print(f"{num}을 입력하셨습니다.")
+    n
 
 
 

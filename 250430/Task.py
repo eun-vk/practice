@@ -88,8 +88,17 @@ a = input()
 
 #문제17: 참/거짓 변환
 a = input()
-a = bool(a)
-print(a)
+b = int(input())
+if a =="":
+    print("False")
+else:
+    print("True")
+if b ==0:
+    print("False")
+else:
+    print("True")
+
+
 
 #문제18: 홀짝 판별
 a = int(input())
