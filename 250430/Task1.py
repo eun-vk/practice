@@ -14,10 +14,8 @@ print(f"거꾸로: {a[::-1]}")
 a = input("문장을 입력하세요")
 b = input("찾을 단어를 입력하세요.")
 
-if b in a:
-    print(f"단어\'{b}\'의 위치:{a.find(b)}")
-else:
-    print(-1)
+print(f"단어\'{b}\'의 위치:{a.find(b)}")
+
 
 #문제24: 문자교체 
 a = input()
@@ -37,12 +35,18 @@ if '@' in email:
 else:
     print("유효하지 않은 이메일 주소입니다.")
 
-#문제27: 문자열 패딩 
+#문제27: 문자열 패딩(while)
 a = input()
 b = int(input())
 
 while len(a) < b:
     a += '*'
+
+#문제27: 문자열 패딩 (a.ljust <-> rjust)
+a = input()
+b = int(input())
+c = a.ljust(b,'*')
+print(c)
 
 
 #문제28: 문자열 중앙 문자 
@@ -100,7 +104,7 @@ elif c =='-':
     print(f"a - b = {a-b}")
 elif c =='*':
     print(f"a * b = {a*b}")
-eles:
+elif: c == '/':
     print(f"a / b = {a/b}")
 
 #문제32: 세금 계산기 
@@ -111,12 +115,20 @@ print(f"세금: {s:.1f}원")
 print(f"세후 금액: {a-s:.1f}원")
 
 #문제33: 논리 연산 테이블 
-a = bool(input())
-b = bool(input())
+a = input()
+b = input()
+a = a=="True"  
+b = b=="True"
+'''bool 연산자를 사용하지 않은 이유는 문자열에서 공백에 여부에 따라
+공백이면 False, 공백이 아니면True이다. 
+그래서 a ==입력받은 문자 True와 같다면 a = True 
+그 외의 다른 문자열이면 False를 반환한다.''' 
+
+
 print(f"{a} AND {b} = {a and b}")
 print(f"{a} OR {b} = {a or b}")
-print(f"NOT {a} = {Not {b}}")
-print(f"NOT {b} = {Not {a}}")
+print(f"NOT {a} = {Not b}")
+print(f"NOT {b} = {Not a}")
 
 #문제34: 할인 계산기 
 a = int(input())
@@ -125,7 +137,7 @@ s = float(a)*(b/100)
 print(f"할인 금액 = {s:.1f}원")
 print(f"최종 가격 = {a-s:.1f}원")
 
-#문제35: 큰 수 판별 
+#문제35: 큰 수 판별(if조건문) 
 a = int(input())
 b = int(input())
 c = int(input())
@@ -135,6 +147,13 @@ if b >a or b>c:
     print(f"가장 큰 수:{b}")
 else:
     print(f"가장 큰 수:{c}")
+
+#문제35: 큰 수 판별 (max)
+a = int(input())
+b = int(input())
+c = int(input())
+print(f"가장 큰 수: {max(a,b,c)}")
+
 
 #문제36: 윤년 판별 
 a = int(input())
@@ -165,8 +184,9 @@ else:
     print(f"학점: F")
 
 #문제39: 자릿수 합계
-a = list(input())
-s = a[0][0] +a[1][0] ?????
+a = input()
+b = sum(int(c) for c in a)
+print(f"자릿 수 합계 : {b}")
 
 #문제40: 복합 조건
 a = int(input())
@@ -190,13 +210,14 @@ a3 = a[2][::-1]
 print(a1,a2,a3)
 
 #문제43: 문자 카운터 
-ch = input()
-v = ["a","i","o","e","u"]
-c = ???
-for i in v:
-    if ch in v:
-        v.count +=1
-    elif ch.isalpha():
+
+
+
+
+    
+
+
+    
 
 #문제44: 근삿값 계산 
 a = float(input())
@@ -229,6 +250,9 @@ a = input().split('.')
 print(f"확장자: {a[1]}")
 
 #문제47 : 문자열 압축 
+
+
+
 
 #문제48 : 팰린드롬 검사 
 a= input()

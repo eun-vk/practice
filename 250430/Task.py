@@ -85,6 +85,17 @@ else:
 
 #문제16: 문자열 분석 
 a = input()
+b = a.count("")
+c= sum(a.count(str(i)) for i in range(10))
+d= sum(map(str.isalpha, a)) 
+print(f"공백 수: {b}")
+print(f"숫자 수: {c}")
+print(f"문자 수: {d}")
+''' 문자열 a의 각 문자에 대해 그 문자가 알파벳이면 True, 
+아니면 False.
+map은 str.isalpha가 a에 적용될 수 있도록 해줌. 
+True = 1, False =0을 반환 
+최종적으로 True의 개수를 더하면 문자의 개수를 구할 수 있다.'''  
 
 #문제17: 참/거짓 변환
 a = input()
@@ -108,8 +119,8 @@ else:
     print(f"{a}은(는) 홀수입니다.")
 
 #문제19: 문자열 분할 
-a = input
-s = ' '.join(a.split(','))
+a = list(input().split())
+s = ','.join(a)
 print(s)
 
 #문제20: 온도 단위 변환기 
