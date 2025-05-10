@@ -200,6 +200,24 @@ else:
     print(f"입장료: 5000원")
     
 #문제41: 비밀번호 강도 검사 
+pw = input()
+len_check = len(pw) >= 8
+has_letter = False
+has_digit = False
+
+for c in pw:
+    if c.isalpha():
+        has_letter =True
+    elif c.isdigit():
+        has_digit = True
+
+if len_check and has letter and has_digit:
+    result = "안전한 비밀번호입니다."
+else:
+    result = "안전하지 않은 비밀번호입니다. 8자 이상의 문자와 숫자를 모두 포함해야 합니다."
+
+print(result)
+
 
 
 #문제42: 단어 뒤집기 
@@ -210,6 +228,8 @@ a3 = a[2][::-1]
 print(a1,a2,a3)
 
 #문제43: 문자 카운터 
+
+sentence = input()
 
 
 
