@@ -73,10 +73,53 @@ book1.add_book()
 
 class Deletebook:
     def __init__ (self):
-        self = books ={}
+        self.books = {}
 
     def delete_book(self):
-        delete_for_book = 0
+        title_to_delete = None
         book_number = input("책 번호를 입력해주세요.")
-        for (number,title) in books:
-            if book_number == 
+
+        for title,number in self.books.items():
+            if book_number == number:
+                title_to_delete = title 
+                break 
+
+        if title_to_delete in self.books:
+            self.books.pop(title_to_delete)
+            print("도서가 삭제되었습니다.")
+        else:
+            print("존재하지 않는 책 번호입니다.")
+
+book1 = Deletebook()
+
+book1.delete_book = {"해리 포터": "001", "어린 왕자": "002"} #테스트용 책 추가
+
+book1.delete_book()
+
+
+#임의의 정수가 입력될 때 0이 나올 때 멈춰라. 
+n = 1
+while n != 0:
+    n = int(input())
+    if n!=0:
+        print(n) 
+
+#정수(1~100) 1개가 입력되었을 때 카운트다운을 출력해보다. 
+
+n = int(input())
+
+while n !=0:
+    print(n)
+    n = n-1 
+
+#정수 1개 입력받아 카운트다운출력하기 2
+n = int(input())
+
+while n !=0:
+    print(n-1)
+    n = n-1
+
+
+
+
+
