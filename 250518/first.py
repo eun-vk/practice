@@ -32,3 +32,26 @@ def minus(x = 0, y = 0):
     return x - y
 
 multiple(plus(a,b), minus(a,b))
+
+# x의 n제곱을 구하는 함수를 만들어주세요. 
+# 재귀함수를 이용하여 만들어야 하며, x는 0이 아닙니다. (x, n > 1)
+
+def power(x,n):
+    if n ==0:
+        return 1 
+    else: 
+        return x**power(x,n-1)
+    
+
+
+# 이 데이터에서 licat을 출력해주세요. 단, 직접 접근은 안됩니다. data[1]로 접근하는 것은 안됩니다.
+
+
+# 잘못 입력된 문자 때문에 에러가 생길 수 있으므로 사전에 에러를 방지하기 위해 특수문자를 모두 제거하는 코드 작성하기. 
+s = '010-1000?2000'
+result = ''
+for i in s:
+    if i.isdigit():
+        result += i
+print(result)
+
