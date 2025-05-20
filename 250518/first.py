@@ -55,3 +55,26 @@ for i in s:
         result += i
 print(result)
 
+class Student:
+    def __init__ (self,name,student_id):
+        self.name = name 
+        self.student_id = student_id
+        self.grade 
+
+    def add_score(self,subject,score):
+        self.grade[subject] = score
+
+    def get_average(self):
+        return sum(self.grade.values())/len(self.grade)
+    
+    def get_highest_subject(self):
+        best_subject = max(self.grade, key=self.grade.get)
+        best_score = self.grade[best_subject]
+        return (best_subject, best_score)
+
+
+    
+
+        
+
+    
