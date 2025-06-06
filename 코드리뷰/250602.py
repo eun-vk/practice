@@ -19,7 +19,7 @@ def solution(n):
 # 2. 사용자 등록 API 만들기
 
 '''
-[ 조건 ]
+[ 조건 ]df
 Pydantic의 BaseModel을 사용하여 사용자 입력을 검증,
 POST 요청으로 사용자 데이터를 받으면, 다음과 같은 응답을 JSON으로 반환,'''
 {"message": "홍길동님, 등록이 완료되었습니다."}
