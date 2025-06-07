@@ -24,7 +24,7 @@ Pydantic의 BaseModel을 사용하여 사용자 입력을 검증,
 POST 요청으로 사용자 데이터를 받으면, 다음과 같은 응답을 JSON으로 반환,'''
 {"message": "홍길동님, 등록이 완료되었습니다."}
 
-
+from fastAPI import 
 
 
 
@@ -51,3 +51,4 @@ min_age 이상인 사용자들의 리스트를 반환'''
     {"name": "이영희", "age": 32},
     {"name": "김민수", "age": 40}
 ]
+
