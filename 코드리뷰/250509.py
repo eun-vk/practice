@@ -185,6 +185,7 @@ def solution_loop(n):
 def solution_sum(n):
     return sum(range(0, n + 1, 2))
 
+
 '''2번'''
 #count()
 def solution(array, n):

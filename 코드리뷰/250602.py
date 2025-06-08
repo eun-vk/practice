@@ -16,6 +16,7 @@ def solution(n):
 
 
 
+
 # 2. 사용자 등록 API 만들기
 
 '''
@@ -24,7 +25,28 @@ Pydantic의 BaseModel을 사용하여 사용자 입력을 검증,
 POST 요청으로 사용자 데이터를 받으면, 다음과 같은 응답을 JSON으로 반환,'''
 {"message": "홍길동님, 등록이 완료되었습니다."}
 
-from fastAPI import 
+from fastapi import FastAPI
+from typing import List
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class User(BaseModel):
+    name: str
+    age: int
+
+users = [
+    {"name": "홍길동", "age": 25},
+    {"name": "이영희", "age": 32},
+    {"name": "김민수", "age": 40}
+]
+
+@app.get("/users", response_model=List[User])
+def get_users(min_age: int):
+    filtered_users = [user for user in users if user["age"] >= min_age]
+    return filtered_users
+
+
 
 
 
@@ -52,3 +74,16 @@ min_age 이상인 사용자들의 리스트를 반환'''
     {"name": "김민수", "age": 40}
 ]
 
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class User(BaseModel):
+    name: str
+    age: int
+
+@app.post("/users")
+def register_user(user: User):
+    return {"message": f"{user.name}님, 등록이 완료되었습니다."}
