@@ -1,13 +1,8 @@
-# config/urls.py 수정
+# blog/urls.py
 
-from django.contrib import admin
 from django.urls import path
-from django.urls import include  # ADDED
+from . import views
 
-urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("chat/", include("chat.urls")),  # ADDED
-]
-
-    # chat/urls에 있는 모든 URL 패턴에 일괄적으로
-    #  chat/ 라는 prefix 주소를 부여하겠다.
+# 장고의 urls.py에게 장고가 요구하는 것은 단 하나 !!
+# urlpatterns 이름의 리스트 => 이름에 오타가 있으면 안 되요.
+urlpatterns = []
